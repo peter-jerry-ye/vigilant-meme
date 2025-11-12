@@ -6,13 +6,13 @@ import(
 )
 
 // Values
-fn discover_agent_types() -> Result[Array[@common.AgentType], @common.AgentError]
+fn discover_agent_types() -> Array[@common.AgentType] raise @common.AgentError
 
 fn get_definition() -> @common.AgentType
 
-fn initialize(String, @common.DataValue) -> Result[Unit, @common.AgentError]
+fn initialize(String, @common.DataValue) -> Unit raise @common.AgentError
 
-fn invoke(String, @common.DataValue) -> Result[@common.DataValue, @common.AgentError]
+fn invoke(String, @common.DataValue) -> @common.DataValue raise @common.AgentError
 
 // Errors
 

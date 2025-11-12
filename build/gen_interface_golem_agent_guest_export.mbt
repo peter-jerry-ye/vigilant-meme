@@ -461,7 +461,7 @@ pub fn wasmExportInitialize(
     }
     _ => panic()
   }
-  let result249 : Result[Unit, @common.AgentError] = @guest.initialize(
+  let result249 : Result[Unit, @common.AgentError] = try? @guest.initialize(
     result, lifted248,
   )
   match result249 {
@@ -1527,7 +1527,7 @@ pub fn wasmExportInvoke(
     }
     _ => panic()
   }
-  let result249 : Result[@common.DataValue, @common.AgentError] = @guest.invoke(
+  let result249 : Result[@common.DataValue, @common.AgentError] = try? @guest.invoke(
     result, lifted248,
   )
   match result249 {
@@ -8089,7 +8089,7 @@ pub fn wasmExportGetDefinitionPostReturn(p0 : Int) -> Unit {
 
 ///|
 pub fn wasmExportDiscoverAgentTypes() -> Int {
-  let result : Result[Array[@common.AgentType], @common.AgentError] = @guest.discover_agent_types()
+  let result : Result[Array[@common.AgentType], @common.AgentError] = try? @guest.discover_agent_types()
   match result {
     Ok(payload) => {
       @ffi.store8(return_area + 0, 0)

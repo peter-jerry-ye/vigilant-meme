@@ -1,8 +1,5 @@
 ///|
-pub fn discover_agent_types() -> Result[
-  Array[@common.AgentType],
-  @common.AgentError,
-] {
+pub fn discover_agent_types() -> Array[@common.AgentType] raise @common.AgentError {
   ...
 }
 
@@ -15,7 +12,7 @@ pub fn get_definition() -> @common.AgentType {
 pub fn initialize(
   str : String,
   data : @common.DataValue,
-) -> Result[Unit, @common.AgentError] {
+) -> Unit raise @common.AgentError {
   ...
 }
 
@@ -23,6 +20,6 @@ pub fn initialize(
 pub fn invoke(
   str : String,
   data : @common.DataValue,
-) -> Result[@common.DataValue, @common.AgentError] {
+) -> @common.DataValue raise @common.AgentError {
   ...
 }
