@@ -1,0 +1,78 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "peter-jerry-ye/golem/interface/wasi/keyvalue/cache"
+
+import(
+  "peter-jerry-ye/golem/interface/wasi/io/poll"
+  "peter-jerry-ye/golem/interface/wasi/keyvalue/types"
+  "peter-jerry-ye/golem/interface/wasi/keyvalue/wasiKeyvalueError"
+)
+
+// Values
+fn delete(String) -> FutureResult
+
+fn exists(String) -> FutureExistsResult
+
+fn get(String) -> FutureGetResult
+
+fn get_or_set(String) -> FutureGetOrSetResult
+
+fn set(String, @types.OutgoingValue, UInt?) -> FutureResult
+
+// Errors
+
+// Types and methods
+pub(all) struct FutureExistsResult(Int)
+fn FutureExistsResult::drop(Self) -> Unit
+fn FutureExistsResult::future_exists_result_get(Self) -> Result[Bool, @wasiKeyvalueError.Error_]?
+#deprecated
+fn FutureExistsResult::inner(Self) -> Int
+fn FutureExistsResult::listen_to_future_exists_result(Self) -> @poll.Pollable
+impl Eq for FutureExistsResult
+impl Show for FutureExistsResult
+
+pub(all) struct FutureGetOrSetResult(Int)
+fn FutureGetOrSetResult::drop(Self) -> Unit
+fn FutureGetOrSetResult::future_get_or_set_result_get(Self) -> Result[GetOrSetEntry, @wasiKeyvalueError.Error_]?
+#deprecated
+fn FutureGetOrSetResult::inner(Self) -> Int
+fn FutureGetOrSetResult::listen_to_future_get_or_set_result(Self) -> @poll.Pollable
+impl Eq for FutureGetOrSetResult
+impl Show for FutureGetOrSetResult
+
+pub(all) struct FutureGetResult(Int)
+fn FutureGetResult::drop(Self) -> Unit
+fn FutureGetResult::future_get_result_get(Self) -> Result[@types.IncomingValue?, @wasiKeyvalueError.Error_]?
+#deprecated
+fn FutureGetResult::inner(Self) -> Int
+fn FutureGetResult::listen_to_future_get_result(Self) -> @poll.Pollable
+impl Eq for FutureGetResult
+impl Show for FutureGetResult
+
+pub(all) struct FutureResult(Int)
+fn FutureResult::drop(Self) -> Unit
+fn FutureResult::future_result_get(Self) -> Result[Unit, @wasiKeyvalueError.Error_]?
+#deprecated
+fn FutureResult::inner(Self) -> Int
+fn FutureResult::listen_to_future_result(Self) -> @poll.Pollable
+impl Eq for FutureResult
+impl Show for FutureResult
+
+pub(all) enum GetOrSetEntry {
+  Occupied(@types.IncomingValue)
+  Vacant(Vacancy)
+}
+impl Eq for GetOrSetEntry
+impl Show for GetOrSetEntry
+
+pub(all) struct Vacancy(Int)
+fn Vacancy::drop(Self) -> Unit
+#deprecated
+fn Vacancy::inner(Self) -> Int
+fn Vacancy::vacancy_fill(Self, UInt?) -> @types.OutgoingValue
+impl Eq for Vacancy
+impl Show for Vacancy
+
+// Type aliases
+
+// Traits
+

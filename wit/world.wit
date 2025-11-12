@@ -1,0 +1,6 @@
+package peter-jerry-ye:golem@0.1.0;
+
+world agent {
+  include golem:api/golem;
+  include golem:agent/agent-guest;
+}

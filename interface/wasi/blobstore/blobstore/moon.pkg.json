@@ -1,0 +1,1 @@
+{ "import": [{ "path" : "peter-jerry-ye/golem/ffi", "alias" : "ffi" }, { "path" : "peter-jerry-ye/golem/interface/wasi/blobstore/container", "alias" : "container" }, { "path" : "peter-jerry-ye/golem/interface/wasi/blobstore/types", "alias" : "types" }] }
