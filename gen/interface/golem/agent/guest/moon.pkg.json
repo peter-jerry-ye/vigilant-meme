@@ -1,1 +1,11 @@
-{ "import": [{ "path" : "peter-jerry-ye/golem/ffi", "alias" : "ffi" }, { "path" : "peter-jerry-ye/golem/interface/golem/agent/common", "alias" : "common" }] }
+{
+  "import": [
+    {
+      "path": "peter-jerry-ye/golem/interface/golem/agent/common",
+      "alias": "common"
+    }
+  ],
+  "virtual": {
+    "has-default": false
+  }
+}
