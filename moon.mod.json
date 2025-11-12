@@ -1,1 +1,1 @@
-{ "name": "peter-jerry-ye/golem", "preferred-target": "wasm" }
+{ "name": "peter-jerry-ye/golem", "version": "0.0.1", "preferred-target": "wasm" }

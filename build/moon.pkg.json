@@ -1,0 +1,38 @@
+{
+  "link": {
+    "wasm": {
+      "exports": [
+        "cabi_realloc:cabi_realloc",
+        "wasmExportDiscoverAgentTypes:golem:agent/guest#discover-agent-types",
+        "wasmExportDiscoverAgentTypesPostReturn:cabi_post_golem:agent/guest#discover-agent-types",
+        "wasmExportGetDefinition:golem:agent/guest#get-definition",
+        "wasmExportGetDefinitionPostReturn:cabi_post_golem:agent/guest#get-definition",
+        "wasmExportInitialize:golem:agent/guest#initialize",
+        "wasmExportInitializePostReturn:cabi_post_golem:agent/guest#initialize",
+        "wasmExportInvoke:golem:agent/guest#invoke",
+        "wasmExportInvokePostReturn:cabi_post_golem:agent/guest#invoke"
+      ],
+      "export-memory-name": "memory",
+      "heap-start-address": 16
+    }
+  },
+  "import": [
+    {
+      "path": "peter-jerry-ye/golem/ffi",
+      "alias": "ffi"
+    },
+    {
+      "path": "peter-jerry-ye/golem/gen/interface/golem/agent/guest",
+      "alias": "guest"
+    },
+    {
+      "path": "peter-jerry-ye/golem/interface/golem/agent/common",
+      "alias": "common"
+    },
+    {
+      "path": "peter-jerry-ye/golem/interface/golem/rpc/types",
+      "alias": "types"
+    }
+  ],
+  "overrides": ["peter-jerry-ye/golemImpl"]
+}

@@ -1,0 +1,6 @@
+{
+  "implement": "peter-jerry-ye/golem/gen/interface/golem/agent/guest",
+  "import": [
+    "peter-jerry-ye/golem/interface/golem/agent/common"
+  ]
+}

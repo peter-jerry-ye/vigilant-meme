@@ -1,0 +1,12 @@
+{
+  "name": "peter-jerry-ye/golemBuild",
+  "deps": {
+    "peter-jerry-ye/golem": {
+      "path": ".."
+    },
+    "peter-jerry-ye/golemImpl": {
+      "path": "../client"
+    }
+  },
+  "version": "0.0.1"
+}

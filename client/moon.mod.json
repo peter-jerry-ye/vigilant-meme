@@ -1,0 +1,9 @@
+{
+  "name": "peter-jerry-ye/golemImpl",
+  "deps": {
+    "peter-jerry-ye/golem": {
+      "path": ".."
+    }
+  },
+  "version": "0.0.1"
+}
